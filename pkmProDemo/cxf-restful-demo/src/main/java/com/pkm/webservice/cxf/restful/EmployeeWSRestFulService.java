@@ -23,7 +23,7 @@ public interface EmployeeWSRestFulService {
 	@Path("/addUser/")
 	@POST
 	@Consumes({"application/xml"})
-	Response addUser(User user);
+	Response addUser(TX user);
 	  
 	@Path("/delUser/{id}/")
 	@DELETE
@@ -65,4 +65,6 @@ public interface EmployeeWSRestFulService {
 	//json is high priority, default is application/xml
 	@Produces({"application/json","application/xml"}) 
 	List<User> findAllUsers();
+	
+	
 }

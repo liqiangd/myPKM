@@ -25,11 +25,14 @@ public class MyServiceImpl implements EmployeeWSRestFulService {
 		 public MyServiceImpl(){
 		   init();
 		 }
-		 public Response addUser(User user) {
-		   users.put(user.getId(), user);
-		   System.out.println("User entity to add: user id= "+user.getId()+" name="+user.getName());
-		   System.out.println("adding user succeed");
-		   System.out.println("total users in pool="+users.size());
+		 public Response addUser(TX user) {
+//		   users.put(user.getId(), user);
+//		   System.out.println("User entity to add: user id= "+user.getId()+" name="+user.getName());
+//		   System.out.println("adding user succeed");
+//		   System.out.println("total users in pool="+users.size());
+//		   System.out.println("total users in classId="+user.getClasses().getClassId());
+//		   System.out.println("total users in pool="+users.size());
+			 System.out.println("total tx in pool="+user.getTX_BODY().getLNG_ID());
 		   return Response.ok().build();
 		 }
 		 public Response delUser(String id) {
